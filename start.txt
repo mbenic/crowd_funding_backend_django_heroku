@@ -7,3 +7,62 @@ username: test  , password: password
 username: mbenic , password: password
 
 cannot login with email in django , must use user name
+
+
+TO SOLVE PROBLEM when copying over the app:
+
+✅ Let’s fix it properly (bulletproof)
+🔴 Step 1 — Ignore activation completely
+
+Run this instead:
+
+myvenv/Scripts/python -m pip install -r requirements.txt
+
+👉 This forces pip to use the correct environment, no matter what
+
+🔴 Step 2 — Verify installation location
+myvenv/Scripts/python -m pip show django
+
+You should now see:
+
+Location: ...crowd_funding_backend_django_heroku/myvenv/Lib/site-packages
+✅ If you actually want activation to work
+
+Git Bash can be unreliable for venvs on Windows. Two better options:
+
+✅ Option A (recommended): Use Command Prompt
+cd crowd_funding_backend_django_heroku
+myvenv\Scripts\activate
+pip install -r requirements.txt
+✅ Option B: Fix Git Bash activation
+
+Try:
+
+source myvenv/Scripts/activate
+hash -r
+
+Then check:
+
+which python
+
+You want:
+
+...crowd_funding_backend_django_heroku/myvenv/Scripts/python
+🧠 The key takeaway
+
+Right now:
+
+pip = ❌ old environment
+your new venv = ✅ exists but unused
+
+So the fix is either:
+
+force pip (python -m pip) ✅
+or properly switch interpreter ✅
+🚀 Quickest path forward
+
+Just run this and move on:
+
+myvenv/Scripts/python -m pip install -r requirements.txt
+
+That will immediately solve your problem.
