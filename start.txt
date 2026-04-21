@@ -1,0 +1,9 @@
+starting django server run :
+
+python manage.py runserver
+
+users :
+username: test  , password: password
+username: mbenic , password: password
+
+cannot login with email in django , must use user name
