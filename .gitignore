@@ -23,3 +23,6 @@ staticfiles/
 
 # Misc
 start.txt
+
+#requirements
+requirements-old.txt
